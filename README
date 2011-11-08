@@ -1,0 +1,11 @@
+A demonstration of tablekit use for Xman2012
+
+1. Clone the repo
+2. $ bundle install
+4. rake db:migrate
+5. rails server
+
+Open http://localhost:3000/
+You will need to add a few licences to start with by clicking "New licence", then edit with the table.
+
+This app is released under the BSD Licence

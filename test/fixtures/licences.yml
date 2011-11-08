@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  cost: 1.5
+  days_valid: 1
+  active: false
+
+two:
+  name: MyString
+  cost: 1.5
+  days_valid: 1
+  active: false

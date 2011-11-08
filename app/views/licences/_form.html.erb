@@ -1,0 +1,33 @@
+<%= form_for(@licence) do |f| %>
+  <% if @licence.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@licence.errors.count, "error") %> prohibited this licence from being saved:</h2>
+
+      <ul>
+      <% @licence.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :cost %><br />
+    <%= f.text_field :cost %>
+  </div>
+  <div class="field">
+    <%= f.label :days_valid %><br />
+    <%= f.text_field :days_valid %>
+  </div>
+  <div class="field">
+    <%= f.label :active %><br />
+    <%= f.check_box :active %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

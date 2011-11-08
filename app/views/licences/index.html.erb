@@ -1,0 +1,33 @@
+<h1>Listing licences</h1>
+
+<table id="licence-table" class="sortable resizable editable">
+  <tr>
+    <th id="name">Name</th>
+    <th id="cost">Cost</th>
+    <th id="days_valid">Days valid</th>
+    <th id="active">Active</th>
+    <th class="nosort"></th>
+    <th class="nosort"></th>
+    <th class="nosort"></th>
+  </tr>
+
+<% @licences.each do |licence| %>
+  <tr id="<%= licence.id %>">
+    <td><%= licence.name %></td>
+    <td><%= licence.cost %></td>
+    <td><%= licence.days_valid %></td>
+    <td><%= licence.active %></td>
+    <td><%= link_to 'Show', licence %></td>
+    <td><%= link_to 'Edit', edit_licence_path(licence) %></td>
+    <td><%= link_to 'Destroy', licence, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Licence', new_licence_path %>
+
+<script>
+  TableKit.options.editAjaxURI = '/licences/tablekit_update';
+</script>

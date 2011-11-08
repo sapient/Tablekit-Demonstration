@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @licence.name %>
+</p>
+
+<p>
+  <b>Cost:</b>
+  <%= @licence.cost %>
+</p>
+
+<p>
+  <b>Days valid:</b>
+  <%= @licence.days_valid %>
+</p>
+
+<p>
+  <b>Active:</b>
+  <%= @licence.active %>
+</p>
+
+
+<%= link_to 'Edit', edit_licence_path(@licence) %> |
+<%= link_to 'Back', licences_path %>
